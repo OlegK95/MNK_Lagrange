@@ -1,0 +1,109 @@
+﻿<Window x:Class="MNK_Lagrange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MNK_Lagrange"
+        mc:Ignorable="d"
+        Title="Aprocsimation" Height="600" Width="600">
+
+    <Grid>
+        <Canvas 
+            Name="canvasDrawingArea"
+            HorizontalAlignment="Left" 
+            Height="620"  
+            VerticalAlignment="Top" 
+            Width="592" 
+            IsEnabled="True"
+            OpacityMask="#FFE45656" 
+            ClipToBounds="True"
+            MouseLeftButtonDown=  "CanvasDrawingArea_MouseLeftButtonDown"
+            MouseRightButtonDown= "CanvasDrawingArea_MouseRightButtonDown"
+        >
+
+            <Path Stroke="Black" StrokeThickness="1" Fill="#CCCCFF">
+                <Path.Data>
+                    <GeometryGroup FillRule="EvenOdd">
+                        <LineGeometry StartPoint="50, 30" EndPoint="350, 30" />
+                        <LineGeometry StartPoint="50, 80" EndPoint="350, 80" />
+                        <LineGeometry StartPoint="50,130" EndPoint="350,130" />
+                        <LineGeometry StartPoint="50,180" EndPoint="350,180" />
+                        <LineGeometry StartPoint="50,230" EndPoint="350,230" />
+                        <LineGeometry StartPoint="50,280" EndPoint="350,280" />
+                        <LineGeometry StartPoint="50,330" EndPoint="350,330" />
+                        <LineGeometry StartPoint="50,380" EndPoint="350,380" />
+                        <LineGeometry StartPoint="50,430" EndPoint="350,430" />
+                        <LineGeometry StartPoint="50,480" EndPoint="350,480" />
+                        <LineGeometry StartPoint="50,530" EndPoint="350,530" />
+
+                        <LineGeometry StartPoint=" 50,30" EndPoint=" 50,530" />
+                        <LineGeometry StartPoint="100,30" EndPoint="100,530" />
+                        <LineGeometry StartPoint="150,30" EndPoint="150,530" />
+                        <LineGeometry StartPoint="200,30" EndPoint="200,530" />
+                        <LineGeometry StartPoint="250,30" EndPoint="250,530" />
+                        <LineGeometry StartPoint="300,30" EndPoint="300,530" />
+                        <LineGeometry StartPoint="350,30" EndPoint="350,530" />
+                    </GeometryGroup>
+                </Path.Data>
+            </Path>
+
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="047" Canvas.Top="540" Text="0" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="097" Canvas.Top="540" Text="1" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="147" Canvas.Top="540" Text="2" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="197" Canvas.Top="540" Text="3" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="247" Canvas.Top="540" Text="4" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="297" Canvas.Top="540" Text="5" />
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="347" Canvas.Top="540" Text="6" />
+
+
+
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="525" Text="0"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="475" Text="1"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="425" Text="2"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="375" Text="3"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="325" Text="4"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="275" Text="5"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="225" Text="6"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="175" Text="7"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="125" Text="8"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="075" Text="9"/>
+            <TextBlock DockPanel.Dock="Top"  Canvas.Left="30" Canvas.Top="025" Text="10"/>
+
+
+
+
+            <Button Name = "btnDraw" Content="Намалювати" 
+                Height="33" Width="86"
+                Canvas.Left="450" Canvas.Top="53" 
+                Background="LightBlue"
+                Foreground="Black"
+                Click = "BtnDraw_Click" />
+
+            <Button Name = "btnClear" Content="Очистити" 
+                Height="34" Width="86"
+                Canvas.Left="450" Canvas.Top="113" 
+                Background="LightBlue"
+                Foreground="Black"
+                Click = "BtnClear_Click" />
+
+            <CheckBox Name = "CheckBoxMNK" Content="МНК" 
+                      Background ="Black" Foreground ="Green" 
+                      Height="18.835" Width="123.767"
+                      Canvas.Left="450" Canvas.Top="206.735" 
+                      IsChecked="True" 
+                      Unchecked="CheckBoxMNK_Unchecked"
+                      Checked="CheckBoxMNK_Checked"/>
+            <CheckBox Name = "CheckBoxLagrange"  Content="Поліном Лагранжа" 
+                      Background ="Black" Foreground ="Maroon" 
+                      Height="22.871" Width="123.767"
+                      Canvas.Left="450" Canvas.Top="230.57"  
+                      IsChecked="True" 
+                      Unchecked="CheckBoxLagrange_Unchecked"
+                      Checked="CheckBoxLagrange_Checked"/>
+        </Canvas>
+    </Grid>
+
+
+
+
+</Window>
